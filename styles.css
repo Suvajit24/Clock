@@ -1,0 +1,50 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #0d0a2b;
+  font-family: Roboto, sans-serif;
+}
+
+.time {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 30vmin;
+  font-weight: 300;
+  color: #ffffffd4;
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.time .sec {
+  font-size: 30vmin;
+  margin-left: 5px;
+}
+
+.time .min::before,
+.time .sec::before {
+  content: ":";
+  margin-right: 5px;
+}
+@media screen and (max-width: 768px) {
+  .time {
+    font-size: 40vmin;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .time {
+    font-size: 50vmin;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .time {
+    flex-wrap: wrap;
+  }
+}
